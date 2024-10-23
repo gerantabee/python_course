@@ -7,12 +7,9 @@ orders.append(["Album",29.99])
 def calctaxes(price):
     # Run to cursor
     return price * .0825
-    # This will cause improper math - use debug to find the issue
-    # return price + (price * .0825)
 
 def addhandling(price):
     return price * .10
-    # return price + (price * .10)
 
 def addshipping(price):
     return price + 7.50

@@ -14,63 +14,42 @@ salestax = {"NY": .0825,
             "CA": .0725}
 
 # print(salestax["NY"])
-# salestax.values()
-salestax.update({"IL": .07, "MN": .03})
-salestax["CA"] = .065
-print(salestax)
-print(salestax.keys())
-print(salestax.values())
+# use ["element"], update, keys() and values()
 
-for i in salestax:
-  if salestax[i] == 0:
-    print("zero")
-  else:
-    print(i, ":", salestax[i])
+# We can loop through dictionaries in a similar way to lists
 
-for i,j in salestax:
-# for i,j in salestax.items():
-    print(i, j)
+# Use items() and variable pairs (i,j) to access keys and values in a loop
+
 
 
 states = ["NY","IL","MA","CA","TX","TX","OR"]
 cities = ["New York","Chicago","Boston", "Los Angeles", "Dallas", "Austin", "Portland"]
 
-city_state: dict = {}
+# Let's create a dictionary called city_state to unite the states and cities
+
 
 # Unite the lists using enumerate
-for index,city in enumerate(cities):
-    # city_state[city] = states[index]
-    city_state.update({city:states[index]})
 
-city_state.update({"Seattle":"WA"})
-city_state["Nashville"] = "TN"
-# print(city_state)
-# print(city_state["Seattle"])
+
+
 
 print("--- List of cities and states enumerated")
-for key,value in city_state.items():
-    print(key,value)
+
 print("--- END list of cities and states enumerated")
 
 
-#Counters do a tally of uniques from a list of items
+# Counters returns a dict tally of uniques from a list of items
+# from collections import Counter to use it
 letters = ['B','B','A','B','C','A','B','B','A','C']
-c = Counter(letters)
-print(c)
 
-# build list from departments to prepare for CSV import
+
+# Reading CSVs into iterables for manipulation
 departments = []
 
-with open('../data/expense_reports.csv', 'r') as file:
-    # reader = csv.reader(file)
-    # DictReader maps each element to a dictionary and uses header row as keys
-    for i in csv.DictReader(file):
-        departments.append(i['Department'])
-        # print(i['Department'])
 
-# Gives a tally of departments!
-dept = Counter(departments)
-print(dept)
+
+# Use Counter to create a tally of departments!
+
 
 # Multi-dimensional dictionaries
 ceos = {
@@ -96,11 +75,3 @@ ceos = {
     "Daniel Zhang": {"company": "Alibaba", "age": 52}
 }
 
-print(ceos["Elon Musk"]["age"])
-ceos["Elon Musk"]["age"] = 53
-print(ceos["Elon Musk"]["age"])
-
-for key,value in ceos.items():
-    print(key)
-    for key,value in value.items():
-        print(key, value)
