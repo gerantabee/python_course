@@ -70,7 +70,7 @@ class Person(Mammal):
 
 # Use this condition to ensure this code only runs when the script is called directly
 if __name__ == "__main__":
-    p = Person(100, "Bill")
+    p = Person(100, "Ingrid")
     print(p.energy)
     p.sleep()
     p.move()
