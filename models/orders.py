@@ -44,16 +44,16 @@ class Order():
         for item in self._items:
             # Use Evaluate Expression
             # print("Order item: {} price: {} qty: {}".format(str(item), item.price, item.quantity))
-            print("Order item: {} price: {} qty: {}".format(str(item), item.price, item.quantity))
+        # Let's also try a conditional breakpoint
+        print("Order item: {} price: {} qty: {}".format(str(item), item.price, item.quantity))
 
 
 
-
-item1 = OrderItem("Bike", 299.99, 1)
-item2 = OrderItem("Basketball", 19.99, 2)
-item3 = OrderItem("Tennis Racket", 140.99, 1)
-
+# Only runs if the script is called directly
 if __name__ == '__main__':
+    item1 = OrderItem("Bike", 299.99, 1)
+    item2 = OrderItem("Basketball", 19.99, 2)
+    item3 = OrderItem("Tennis Racket", 140.99, 1)
     ordr = Order()
     ordr.appendItem(item1)
     ordr.appendItem(item2)
