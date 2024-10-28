@@ -1,3 +1,5 @@
+from typing import Final,final
+
 class Mammal:
     # Variable stub
     # Use underscore for 'private' naming convention
@@ -14,7 +16,7 @@ class Mammal:
         # self.cals = cals
         self._cals += cals
         print("Eating {} calories".format(cals))
-
+    # add @final to highlight issues
     def sleep(self):
         print("Zzzzzz")
 
@@ -52,6 +54,9 @@ class Person(Mammal):
 
     def __str__(self):
         return "Person class"
+
+    def sleep(self):
+        print("This is how people sleep")
 
     # Getter and setter
     @property

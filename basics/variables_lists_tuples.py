@@ -1,9 +1,11 @@
+from typing import final, Final
+
 # Variables are loosely typed in Python, and dtype is flexible with assignment
+# var1 : Final[int] = 20
 var1 = 20
-var1 = "Fred"
-var1 = True
 
 print(var1)
+var1 = "Jim"
 
 n1, n2, n3 = 10, 20, 40
 
@@ -61,7 +63,7 @@ grades_updated = []
 
 # OR
 
-for i,grade in enumerate(grades):
+for i, grade in enumerate(grades):
     # Add 15 points to each grade
     grade += 15
     grades[i] = grade
